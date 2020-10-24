@@ -1,0 +1,362 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/candidate-edit-profile.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div id="nav-placeholder"></div>
+
+    <div class="container margin-top-80">
+        <div class="row flex-lg-nowrap">
+            <div class="col">
+                <div class="row">
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="e-profile">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-auto mb-3">
+                                            <div class="mx-auto" style="width: 140px;">
+                                                <div class="d-flex justify-content-center align-items-center rounded"
+                                                    style="height: 140px; background-color: rgb(233, 236, 239);">
+                                                    <span
+                                                        style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                            <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                                <h4 id="candidate-title" class="pt-sm-2 pb-1 mb-0 text-nowrap">John
+                                                    Smith</h4>
+                                                <p id="candidate-title-email" class="mb-0"></p>
+                                                <div id="profile-rating-header" class="text-muted"><small>Profile
+                                                        Rating</small></div>
+                                            </div>
+                                            <div class="text-center text-sm-right">
+                                                <span class="badge badge-secondary">Candidate</span>
+                                                <div class="text-muted"><small></small></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#details"
+                                                role="tab" aria-controls="details" aria-selected="true">Profile
+                                                Details</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content pt-3" id="myTabContent">
+                                        <div id="details" class="tab-pane fade show active" role="tabpanel"
+                                            aria-labelledby="details-tab">
+                                            <form class="form" novalidate="">
+                                                <div id="details-alert-container"></div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Full Name</label>
+                                                                    <input id="full-name" class="form-control"
+                                                                        type="text" name="name" placeholder="" value=""
+                                                                        disabled="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Email</label>
+                                                                    <input id="candidate-email" class="form-control"
+                                                                        type="text" placeholder="" disabled="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col mb-3">
+                                                                <div class="form-group">
+                                                                    <label>About</label>
+                                                                    <textarea id="bio" class="form-control" rows="5"
+                                                                        placeholder="My Bio" disabled="true"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Years of Experience</label>
+                                                                    <input id="exp-years" class="form-control"
+                                                                        type="text" name="exp-years" placeholder=""
+                                                                        value="" disabled="true">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Notice Period</label>
+                                                                    <input id="notice-period" class="form-control"
+                                                                        type="text" name="notice-period"
+                                                                        placeholder="In Months" value=""
+                                                                        disabled="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Current CTC</label>
+                                                                    <input id="current-ctc" class="form-control"
+                                                                        type="text" name="current-ctc" placeholder=""
+                                                                        value="" disabled="true">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Expected CTC</label>
+                                                                    <input id="expected-ctc" class="form-control"
+                                                                        type="text" name="expected-ctc" placeholder=""
+                                                                        value="" disabled="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Skills</label>
+                                                                    <select id="skills" class="selectpicker" multiple
+                                                                        data-live-search="true" disabled="true">
+                                                                        <option value="java">Java</option>
+                                                                        <option value="python">Python</option>
+                                                                        <option value="rest api">REST API</option>
+                                                                        <option value="javascript">JavaScript</option>
+                                                                        <option value="SQL">SQL</option>
+                                                                        <option value="reactjs">React JS</option>
+                                                                        <option value="angular">Angular</option>
+                                                                        <option value="git">Git</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Languages</label>
+                                                                    <select id="languages" class="selectpicker" multiple
+                                                                        data-live-search="true" disabled="true">
+                                                                        <option value="English">English</option>
+                                                                        <option value="French">French</option>
+                                                                        <option value="German">German</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="work-exp-container">
+                                                            <label>Work Experience</label>
+                                                            <div id="exp-0" class="work-exp">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>Company</label>
+                                                                            <input class="form-control company"
+                                                                                type="text" name="company"
+                                                                                placeholder="" value="" disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>Job Title</label>
+                                                                            <input class="form-control job-title"
+                                                                                type="text" name="job-title"
+                                                                                placeholder="" value="" disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>Start Date</label>
+                                                                            <input class="form-control start-date"
+                                                                                type="text" name="start-date"
+                                                                                placeholder="DD/MM/YYYY" value=""
+                                                                                disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>End Date</label>
+                                                                            <input class="form-control end-date"
+                                                                                type="text" name="end-date"
+                                                                                placeholder="DD/MM/YYYY" value=""
+                                                                                disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <label>Current Job</label>
+                                                                        <input type="checkbox" class="d-block"
+                                                                            aria-label="Hide the end date"
+                                                                            disabled="true">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>Description</label>
+                                                                            <textarea class="form-control description"
+                                                                                rows="5"
+                                                                                placeholder="Describe your role"
+                                                                                disabled="true"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="education-container">
+                                                            <label>Education</label>
+                                                            <div id="edu-0" class="education">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>Area of Study</label>
+                                                                            <input class="form-control study"
+                                                                                type="text" name="study" placeholder=""
+                                                                                value="" disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>University</label>
+                                                                            <input class="form-control university"
+                                                                                type="text" name="university"
+                                                                                placeholder="" value="" disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>Start Date</label>
+                                                                            <input class="form-control edu-start-date"
+                                                                                type="text" name="edu-start-date"
+                                                                                placeholder="DD/MM/YYYY" value=""
+                                                                                disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <div class="form-group">
+                                                                            <label>End Date</label>
+                                                                            <input class="form-control edu-end-date"
+                                                                                type="text" name="edu-end-date"
+                                                                                placeholder="DD/MM/YYYY" value=""
+                                                                                disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="other-profiles-container">
+                                                    <label>Other Profile Links</label>
+                                                    <div class="other-profiles">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Hackerrank</label>
+                                                                    <input id="hackerrank" class="form-control"
+                                                                        type="text" name="hackerrank" placeholder=""
+                                                                        value="" disabled="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="other-profiles">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>GitHub</label>
+                                                                    <input id="github" class="form-control" type="text"
+                                                                        name="github" placeholder="" value=""
+                                                                        disabled="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="other-profiles">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>StackOverflow</label>
+                                                                    <input id="stackoverflow" class="form-control"
+                                                                        type="text" name="stackoverflow" placeholder=""
+                                                                        value="" disabled="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div id="rating-placeholder">
+                                                            <span id="rating-message"></span>
+                                                            <input id="rating" type="hidden" name="rating" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="foot-note">
+        <!--Section: Content-->
+        <section class="px-md-5 mx-md-5 py-5 text-center text-white z-depth-1">
+            <h3 class="">Made with <i class="fas fa-heart color-red mx-1"></i> by team</h3>
+        </section>
+        <!--Section: Content-->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-storage-api/1.9.4/jquery.storageapi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    <script src="./js/candidate-view-profile.js"></script>
+    <script src="./js/logout.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#nav-placeholder").load("recruiter-navbar.html")
+        })
+    </script>
+</body>
+
+</html>

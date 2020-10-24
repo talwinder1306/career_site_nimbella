@@ -1,0 +1,30 @@
+{
+  "name": "career_site_nimbella",
+  "version": "1.0.0",
+  "description": "Career portal project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node local.js",
+    "local": "nodemon local.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talwinder1306/career_site_nimbella"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talwinder1306/career_site_nimbella/issues"
+  },
+  "homepage": "https://github.com/talwinder1306/career_site_nimbella",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "mongoose": "^5.10.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

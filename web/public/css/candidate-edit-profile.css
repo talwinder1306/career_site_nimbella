@@ -1,0 +1,25 @@
+.bootstrap-select > .dropdown-toggle {
+  height: 40px;
+}
+
+.bootstrap-select {
+  display: block !important;
+  width: 100% !important;
+}
+
+.work-exp,
+.education,
+.other-profiles {
+  background: #f8f9fa;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.education-container {
+  margin: 15px 0px;
+}
+
+#rating-placeholder {
+  padding: 1em;
+  margin: 1em 0;
+}
